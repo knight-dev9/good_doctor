@@ -8,8 +8,4 @@ class Graphics {
       LottieBuilder.asset('${_animationFolder}doctor_tasks.json');
 
   static Image logo = '${_imageFolder}logo.png'.toIcon(size: 50);
-
-  static Image tabScan = '${_imageFolder}tab_scan.png'.toIcon(
-    color: Palette.greyDarkColor2,
-  );
 }

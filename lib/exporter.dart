@@ -29,7 +29,6 @@ export '../configs/themes.dart';
 export '../configs/graphics.dart';
 export '../configs/localizer.dart';
 export '../configs/palette.dart';
-export 'configs/constants.dart';
 
 // Pages
-export '../pages/splash_page.dart';
+export '../pages/doctor_page.dart';

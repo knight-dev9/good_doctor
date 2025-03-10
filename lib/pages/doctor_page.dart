@@ -2,14 +2,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../exporter.dart';
 
-class SplashPage extends StatefulWidget {
-  const SplashPage({super.key});
+class DoctorPage extends StatefulWidget {
+  const DoctorPage({super.key});
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
+  State<DoctorPage> createState() => _DoctorPageState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _DoctorPageState extends State<DoctorPage> {
   @override
   void initState() {
     checkUser();
@@ -96,36 +96,21 @@ class _SplashPageState extends State<SplashPage> {
   Widget get projectTitle {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final logoSize = constraints.maxWidth * 0.125;
-
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Image.asset(
-              'assets/images/knight_logo.png',
-              width: logoSize,
-              height: logoSize,
-            ),
-            const SizedBox(width: 10),
-            Text(
-              'Good Doctor',
-              style: GoogleFonts.playball(
-                  textStyle: TextStyle(
-                    color: Colors.black87,
-                    fontSize: constraints.maxWidth * 0.08,
-                  ),
-                  shadows: [
-                    const Shadow(
-                      color: Colors.white,
-                      blurRadius: 5,
-                      offset: Offset(1, 5),
-                    )
-                  ]),
-              textAlign: TextAlign.center,
-            ),
-          ],
+        return Text(
+          'Good Doctor',
+          style: GoogleFonts.playball(
+              textStyle: TextStyle(
+                color: Colors.black87,
+                fontSize: constraints.maxWidth * 0.08,
+              ),
+              shadows: [
+                const Shadow(
+                  color: Colors.white,
+                  blurRadius: 5,
+                  offset: Offset(1, 5),
+                )
+              ]),
+          textAlign: TextAlign.center,
         );
       },
     );

@@ -3,7 +3,6 @@ import '../exporter.dart';
 class Session {
   static const String _user = 'user';
   static const String _language = 'language';
-  static const String _lastScan = 'lastScan';
 
   static Future<SharedPreferences> _shared() {
     return SharedPreferences.getInstance();
@@ -43,21 +42,6 @@ class Session {
     final prefs = await _shared();
     final languageCode = prefs.getString(_language);
     return Localizer.findLocale(languageCode);
-  }
-
-
-  static Future<bool> setLastScan(Map<String, dynamic> scan) async {
-    final prefs = await _shared();
-    return await prefs.setString(_lastScan, jsonEncode(scan));
-  }
-
-  static Future<Map<String, dynamic>> getLastScan() async {
-    final prefs = await _shared();
-    String json = prefs.getString(_lastScan) ?? '';
-    if (json.isNotEmpty) {
-      return await jsonDecode(json);
-    }
-    return {};
   }
 
   static Future<bool> clear() async {

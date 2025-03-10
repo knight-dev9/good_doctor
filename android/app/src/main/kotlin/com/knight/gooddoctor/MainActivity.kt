@@ -1,4 +1,4 @@
-package com.viroc.skill_care
+package com.knight.gooddoctor
 
 import io.flutter.embedding.android.FlutterActivity
 

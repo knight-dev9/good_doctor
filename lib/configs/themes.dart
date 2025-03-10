@@ -104,8 +104,10 @@ class Themes {
   static TabBarTheme get tabBarTheme {
     return TabBarTheme(
       labelStyle: TextStyle(color: Palette.primaryColor, fontSize: 12),
-      unselectedLabelStyle:
-          TextStyle(color: Palette.greyDarkColor2, fontSize: 12),
+      unselectedLabelStyle: TextStyle(
+        color: Palette.greyDarkColor,
+        fontSize: 12,
+      ),
       dividerHeight: 0,
       indicatorColor: Colors.transparent,
     );

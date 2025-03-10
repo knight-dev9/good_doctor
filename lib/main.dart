@@ -75,7 +75,7 @@ class _MyAppState extends State<MyApp> {
         return Localizer.supportedLocale(supportedLocales, locale);
       },
       localizationsDelegates: Localizer.delegates,
-      home: SplashPage(),
+      home: DoctorPage(),
     );
   }
 }

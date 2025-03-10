@@ -1,5 +1,4 @@
 import 'package:intl/intl.dart';
-import 'dart:ui' as ui;
 import '../exporter.dart';
 
 class Tools {
@@ -52,7 +51,7 @@ class Tools {
   static void restart() async {
     await ContextHolder.key.currentState?.pushAndRemoveUntil(MaterialPageRoute(
       builder: (context) {
-        return SplashPage();
+        return DoctorPage();
       },
     ), (route) => false);
   }
